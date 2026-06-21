@@ -1,28 +1,38 @@
 import json
+import os
 from datetime import date
 
 
 with open("data/topics.json") as f:
-    data=json.load(f)
+    data = json.load(f)
 
 
-topic=data["categories"][0]
+topics = data["categories"][:3]
 
 
-article=f"""
+os.makedirs("drafts", exist_ok=True)
 
+
+for topic in topics:
+
+    article = f"""
 # {topic}
-
 
 ## Introduction
 
-Latest cybersecurity research and analysis.
+Daily cybersecurity analysis about {topic}.
+
+Date: {date.today()}
 
 
 ## Overview
 
-This article explains {topic} concepts,
-tools, attacks and mitigation.
+This article explains:
+
+- Current trends
+- Security risks
+- Detection methods
+- Mitigation techniques
 
 
 ## Detection
@@ -31,31 +41,31 @@ Security teams should monitor:
 
 - Logs
 - Alerts
-- Indicators
-- User activity
+- Network activity
+- Endpoint events
 
 
 ## Mitigation
 
-Recommended security practices:
+Recommended actions:
 
-- Update systems
-- Monitor events
-- Apply security controls
+- Patch systems
+- Improve monitoring
+- Update security controls
 
 
 ## Conclusion
 
-Continuous learning improves cybersecurity defense.
+Continuous cybersecurity research helps defenders.
 
 """
 
 
-filename=f"drafts/{topic.replace(' ','-')}.md"
+    filename = f"drafts/{topic.replace(' ','-')}.md"
 
 
-with open(filename,"w") as f:
-    f.write(article)
+    with open(filename,"w") as f:
+        f.write(article)
 
 
-print("Draft created:",filename)
+    print("Created:", filename)

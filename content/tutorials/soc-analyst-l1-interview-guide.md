@@ -1,19 +1,3 @@
----
-
-title: "SOC Analyst L1 Interview Guide (2026)"
-author: "DetectionOps"
-category: "Tutorials"
-date: "2026-06-22"
-tags:
-
-* SOC
-* QRadar
-* SIEM
-* Cybersecurity
-* Interview Questions
-
----
-
 # SOC Analyst L1 Interview Guide (2026)
 
 ## Introduction

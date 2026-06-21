@@ -1,6 +1,246 @@
+*{
+    box-sizing:border-box;
+}
+
 body{
-  background:#f5f1e8;
-  font-family:Arial,sans-serif;
-  margin:0;
-  padding:0;
+
+    margin:0;
+    background:#f5f1e8;
+    color:#111;
+    font-family:Arial, Helvetica, sans-serif;
+
+}
+
+
+/* paper texture effect */
+
+body::before{
+
+content:"";
+
+position:fixed;
+
+inset:0;
+
+background-image:
+radial-gradient(#00000015 1px,transparent 1px);
+
+background-size:20px 20px;
+
+pointer-events:none;
+
+z-index:-1;
+
+}
+
+
+/* Navbar */
+
+.navbar{
+
+width:85%;
+
+margin:25px auto;
+
+padding:18px 30px;
+
+background:#ffffff;
+
+border:1px solid #ddd;
+
+border-radius:40px;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+box-shadow:0 10px 30px #00000015;
+
+}
+
+
+.logo h2{
+
+margin:0;
+
+font-size:28px;
+
+}
+
+
+nav a{
+
+color:#111;
+
+text-decoration:none;
+
+margin-left:20px;
+
+font-weight:600;
+
+}
+
+
+/* Hero */
+
+.hero{
+
+min-height:70vh;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+text-align:center;
+
+padding:40px;
+
+}
+
+
+.tagline{
+
+font-size:18px;
+
+letter-spacing:2px;
+
+}
+
+
+.hero h1{
+
+font-size:70px;
+
+line-height:1.1;
+
+max-width:900px;
+
+margin:20px 0;
+
+}
+
+
+.subtitle{
+
+font-size:22px;
+
+max-width:700px;
+
+color:#555;
+
+}
+
+
+/* Categories */
+
+.categories,
+.latest,
+.about{
+
+width:85%;
+
+margin:auto;
+
+padding:50px 0;
+
+}
+
+
+h2{
+
+font-size:40px;
+
+}
+
+
+.category-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+gap:20px;
+
+}
+
+
+/* Cards */
+
+.card{
+
+background:white;
+
+padding:25px;
+
+border-radius:20px;
+
+border:1px solid #ddd;
+
+font-size:20px;
+
+box-shadow:0 8px 20px #00000012;
+
+transition:.2s;
+
+}
+
+
+.card:hover{
+
+transform:translateY(-5px);
+
+box-shadow:0 15px 30px #00000025;
+
+}
+
+
+/* Footer */
+
+footer{
+
+padding:40px;
+
+text-align:center;
+
+background:white;
+
+margin-top:50px;
+
+}
+
+
+
+/* Mobile */
+
+@media(max-width:700px){
+
+.navbar{
+
+flex-direction:column;
+
+gap:20px;
+
+}
+
+
+.hero h1{
+
+font-size:42px;
+
+}
+
+nav a{
+
+display:block;
+
+margin:10px;
+
+}
+
 }

@@ -1,0 +1,19 @@
+[
+ {
+  "title":"SOC Analyst L1 Interview Guide",
+  "file":"articles/SOC-Operations.html",
+  "category":"SOC Operations"
+ },
+
+ {
+  "title":"Threat Hunting Basics",
+  "file":"articles/Threat-Hunting.html",
+  "category":"Threat Hunting"
+ },
+
+ {
+  "title":"Detection Engineering Guide",
+  "file":"articles/Detection-Engineering.html",
+  "category":"Detection Engineering"
+ }
+]

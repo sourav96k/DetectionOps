@@ -1,15 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
 
-<meta charset="UTF-8">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>DetectionOps</title>
 
-<link rel="stylesheet" href="./style.css">
+<link rel="stylesheet" href="style.css">
 
 </head>
 
@@ -17,12 +13,9 @@
 <body>
 
 
-<header class="navbar">
+<header>
 
-<div class="logo">
-DetectionOps
-</div>
-
+<h2>DetectionOps</h2>
 
 <nav>
 
@@ -40,39 +33,21 @@ DetectionOps
 
 <section id="home" class="hero">
 
+<h1>Building Cyber Intelligence</h1>
 
-<div class="tagline">
-Cyber Intelligence Platform
-</div>
-
-
-<h1>
-Building Cyber Intelligence
-<br>
-For SOC Professionals
-</h1>
-
-
-<p>
-Daily cybersecurity research, threat intelligence,
-AI security and detection engineering.
-</p>
-
+<p>SOC | Threat Intel | Detection Engineering</p>
 
 </section>
 
 
 
-
-
 <!-- SEARCH -->
 
-<div class="search-box">
+<div class="search">
 
 <input 
-type="text"
 id="search"
-placeholder="Search articles..."
+placeholder="Search DetectionOps..."
 >
 
 </div>
@@ -81,38 +56,26 @@ placeholder="Search articles..."
 
 
 
+<section id="categories">
 
-
-<section id="categories" class="categories">
-
-
-<h2>
-Featured Categories
-</h2>
+<h2>Categories</h2>
 
 
 <div class="grid">
 
+<div class="box">SOC Operations</div>
 
-<div class="card">SOC Operations</div>
+<div class="box">Palo Alto</div>
 
-<div class="card">SOC Interviews</div>
+<div class="box">SIEM</div>
 
-<div class="card">Threat Hunting</div>
+<div class="box">Threat Hunting</div>
 
-<div class="card">Detection Engineering</div>
+<div class="box">Malware</div>
 
-<div class="card">Threat Intelligence</div>
-
-<div class="card">Palo Alto</div>
-
-<div class="card">SIEM</div>
-
-<div class="card">Incident Response</div>
-
+<div class="box">AI Security</div>
 
 </div>
-
 
 </section>
 
@@ -121,74 +84,42 @@ Featured Categories
 
 
 
+<section id="articles">
 
-<section id="articles" class="latest">
 
-
-<h2>
-Latest Articles
-</h2>
+<h2>Articles</h2>
 
 
 <div class="grid">
 
 
+<a class="box"
+href="articles/soc-analyst-l1-guide.html">
 
-<a class="article"
-href="./articles/soc-analyst-l1-guide.html">
-
-
-<h3>
-SOC Analyst L1 Interview Guide
-</h3>
-
-
-<p>
-SOC concepts, SIEM and interview preparation.
-</p>
-
+SOC Analyst L1 Guide
 
 </a>
 
 
 
+<div class="box">
 
-
-<div class="article">
-
-<h3>
-AI Cyber Attacks
-</h3>
-
-<p>
-AI security threats.
-</p>
+Palo Alto Guide
 
 </div>
 
 
+<div class="box">
 
-
-
-<div class="article">
-
-<h3>
-Palo Alto Detection Guide
-</h3>
-
-<p>
-Firewall monitoring.
-</p>
+AI Cyber Attack
 
 </div>
-
 
 
 </div>
 
 
 </section>
-
 
 
 
@@ -204,33 +135,28 @@ DetectionOps © 2026
 
 
 
-
 <script>
 
 
-document
-.getElementById("search")
-.addEventListener("keyup", function(){
+let search =
+document.getElementById("search");
+
+
+search.addEventListener("keyup",()=>{
 
 
 let value =
-this.value.toLowerCase();
+search.value.toLowerCase();
 
 
 
-let items =
-document.querySelectorAll(".card,.article");
+document
+.querySelectorAll(".box")
+.forEach(item=>{
 
 
-
-items.forEach(item=>{
-
-
-if(
-item.innerText
-.toLowerCase()
-.includes(value)
-)
+if(item.innerText.toLowerCase()
+.includes(value))
 
 {
 
@@ -253,12 +179,10 @@ item.style.display="none";
 });
 
 
-
 </script>
 
 
 
 </body>
-
 
 </html>

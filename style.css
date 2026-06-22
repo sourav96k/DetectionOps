@@ -1,54 +1,29 @@
-/* ===== Global ===== */
-
-*{
-    box-sizing:border-box;
-}
-
-
 body{
 
-    margin:0;
+margin:0;
 
-    background:#f4efe4;
+background:#f4efe4;
 
-    font-family:Arial, Helvetica, sans-serif;
+font-family:Arial;
 
-    color:#111;
-
-}
-
-
-/* ===== Navbar ===== */
-
-
-.navbar{
-
-    width:90%;
-
-    margin:25px auto;
-
-    padding:20px 35px;
-
-    background:white;
-
-    border-radius:30px;
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-
-    box-shadow:0 10px 30px rgba(0,0,0,0.12);
+color:#111;
 
 }
 
 
-.logo{
+header{
 
-    font-size:26px;
+margin:20px;
 
-    font-weight:bold;
+padding:20px;
+
+background:white;
+
+border-radius:25px;
+
+display:flex;
+
+justify-content:space-between;
 
 }
 
@@ -56,58 +31,29 @@ body{
 
 nav a{
 
-    color:#111;
+margin:15px;
 
-    text-decoration:none;
+text-decoration:none;
 
-    margin-left:25px;
-
-    font-weight:600;
+color:black;
 
 }
 
-
-nav a:hover{
-
-    opacity:.6;
-
-}
-
-
-
-
-/* ===== Hero ===== */
 
 
 .hero{
 
-    min-height:55vh;
+height:50vh;
 
-    display:flex;
+display:flex;
 
-    flex-direction:column;
+flex-direction:column;
 
-    justify-content:center;
+justify-content:center;
 
-    align-items:center;
+align-items:center;
 
-    text-align:center;
-
-    padding:30px;
-
-}
-
-
-
-.tagline{
-
-    background:white;
-
-    padding:10px 25px;
-
-    border-radius:30px;
-
-    box-shadow:0 8px 20px #0002;
+text-align:center;
 
 }
 
@@ -115,90 +61,53 @@ nav a:hover{
 
 .hero h1{
 
-    font-size:60px;
-
-    line-height:1.1;
-
-    margin:25px 0;
+font-size:55px;
 
 }
 
 
 
-.hero p{
+.search{
 
-    font-size:20px;
+display:flex;
 
-    max-width:700px;
+justify-content:center;
 
-    color:#555;
-
-}
-
-
-
-
-
-/* ===== Search ===== */
-
-
-.search-box{
-
-    width:100%;
-
-    display:flex;
-
-    justify-content:center;
-
-    margin:40px 0;
+margin:40px;
 
 }
 
 
 
-.search-box input{
+.search input{
 
-    width:65%;
+width:600px;
 
-    max-width:650px;
+max-width:90%;
 
-    height:60px;
+height:60px;
 
-    padding:0 30px;
+border-radius:40px;
 
-    border-radius:40px;
+border:0;
 
-    border:1px solid #ddd;
+font-size:22px;
 
-    outline:none;
+padding:0 30px;
 
-    font-size:20px;
+text-align:center;
 
-    background:white;
-
-    box-shadow:0 10px 30px #0002;
+box-shadow:0 10px 30px #0003;
 
 }
 
 
 
-.search-box input:focus{
+section{
 
-    border-color:#111;
+width:85%;
 
-}
-
-
-
-/* ===== Sections ===== */
-
-
-.categories,
-.latest{
-
-    width:85%;
-
-    margin:60px auto;
+margin:60px auto;
 
 }
 
@@ -206,155 +115,72 @@ nav a:hover{
 
 h2{
 
-    text-align:center;
-
-    font-size:32px;
-
-    margin-bottom:30px;
+text-align:center;
 
 }
 
-
-
-
-
-/* ===== Cards ===== */
 
 
 .grid{
 
-    display:grid;
+display:grid;
 
-    grid-template-columns:repeat(4,1fr);
+grid-template-columns:repeat(3,1fr);
 
-    gap:20px;
-
-}
-
-
-
-.card,
-.article{
-
-    background:white;
-
-    padding:30px;
-
-    border-radius:25px;
-
-    box-shadow:0 10px 30px #0002;
-
-    color:#111;
-
-    text-decoration:none;
-
-    transition:.25s;
+gap:20px;
 
 }
 
 
 
-.card:hover,
-.article:hover{
+.box{
 
-    transform:translateY(-8px);
+background:white;
+
+padding:35px;
+
+border-radius:25px;
+
+text-decoration:none;
+
+color:black;
+
+box-shadow:0 10px 25px #0002;
 
 }
 
 
 
+.box:hover{
 
-
-.article h3{
-
-    margin-top:0;
+transform:translateY(-5px);
 
 }
 
-
-
-
-
-/* ===== Footer ===== */
 
 
 footer{
 
-    text-align:center;
+text-align:center;
 
-    padding:40px;
-
-    color:#555;
+padding:40px;
 
 }
 
 
 
-
-/* ===== Mobile ===== */
-
-
-@media(max-width:900px){
-
+@media(max-width:700px){
 
 .grid{
 
-    grid-template-columns:repeat(2,1fr);
+grid-template-columns:1fr;
 
 }
-
 
 .hero h1{
 
-    font-size:40px;
+font-size:35px;
 
 }
-
-
-}
-
-
-
-@media(max-width:600px){
-
-
-.navbar{
-
-    flex-direction:column;
-
-    gap:20px;
-
-}
-
-
-nav a{
-
-    margin:10px;
-
-}
-
-
-.grid{
-
-    grid-template-columns:1fr;
-
-}
-
-
-
-.search-box input{
-
-    width:90%;
-
-}
-
-
-
-.hero h1{
-
-    font-size:32px;
-
-}
-
 
 }

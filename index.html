@@ -4,6 +4,7 @@
 <head>
 
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>DetectionOps</title>
@@ -25,24 +26,19 @@ DetectionOps
 
 <nav>
 
-<a href="./index.html">Home</a>
+<a href="#home">Home</a>
 
 <a href="#articles">Articles</a>
 
-<a href="#categories">Threat Intel</a>
-
-<a href="#research">Research</a>
+<a href="#categories">Categories</a>
 
 </nav>
-
 
 </header>
 
 
 
-
-
-<section class="hero">
+<section id="home" class="hero">
 
 
 <div class="tagline">
@@ -69,44 +65,50 @@ AI security and detection engineering.
 
 
 
+<!-- SEARCH -->
+
+<div class="search-box">
+
+<input 
+type="text"
+id="search"
+placeholder="Search articles..."
+>
+
+</div>
+
+
+
+
+
+
+
 <section id="categories" class="categories">
 
 
-<h2>Featured Categories</h2>
+<h2>
+Featured Categories
+</h2>
 
 
 <div class="grid">
 
 
 <div class="card">SOC Operations</div>
+
 <div class="card">SOC Interviews</div>
+
 <div class="card">Threat Hunting</div>
+
 <div class="card">Detection Engineering</div>
 
 <div class="card">Threat Intelligence</div>
-<div class="card">Incident Response</div>
-<div class="card">Malware Analysis</div>
-<div class="card">Ransomware</div>
-
-<div class="card">AI Security</div>
-<div class="card">AI Attacks</div>
-<div class="card">LLM Security</div>
-<div class="card">CVE Analysis</div>
-
-<div class="card">QRadar</div>
-<div class="card">Splunk</div>
-<div class="card">Microsoft Sentinel</div>
-<div class="card">Wazuh</div>
 
 <div class="card">Palo Alto</div>
-<div class="card">FortiGate</div>
-<div class="card">Sophos</div>
-<div class="card">CrowdStrike</div>
 
-<div class="card">MITRE ATT&CK</div>
-<div class="card">YARA Rules</div>
-<div class="card">Sigma Rules</div>
-<div class="card">Cloud Security</div>
+<div class="card">SIEM</div>
+
+<div class="card">Incident Response</div>
 
 
 </div>
@@ -123,7 +125,9 @@ AI security and detection engineering.
 <section id="articles" class="latest">
 
 
-<h2>Latest Articles</h2>
+<h2>
+Latest Articles
+</h2>
 
 
 <div class="grid">
@@ -140,7 +144,7 @@ SOC Analyst L1 Interview Guide
 
 
 <p>
-Interview questions and practical SOC concepts.
+SOC concepts, SIEM and interview preparation.
 </p>
 
 
@@ -150,75 +154,34 @@ Interview questions and practical SOC concepts.
 
 
 
-<a class="article" href="#">
-
+<div class="article">
 
 <h3>
-Latest AI Cyber Attacks
+AI Cyber Attacks
 </h3>
 
-
 <p>
-AI security threats and mitigation techniques.
+AI security threats.
 </p>
 
-
-</a>
-
+</div>
 
 
 
 
-<a class="article" href="#">
 
+<div class="article">
 
 <h3>
 Palo Alto Detection Guide
 </h3>
 
-
 <p>
-Firewall monitoring and threat prevention.
+Firewall monitoring.
 </p>
 
-
-</a>
-
-
-
 </div>
 
-
-</section>
-
-
-
-
-
-
-
-<section id="research" class="latest">
-
-
-<h2>Research</h2>
-
-
-<div class="grid">
-
-
-<div class="card">
-Threat Research
-</div>
-
-
-<div class="card">
-CVE Analysis
-</div>
-
-
-<div class="card">
-Security Tools
-</div>
 
 
 </div>
@@ -239,6 +202,63 @@ DetectionOps © 2026
 </footer>
 
 
+
+
+
+<script>
+
+
+document
+.getElementById("search")
+.addEventListener("keyup", function(){
+
+
+let value =
+this.value.toLowerCase();
+
+
+
+let items =
+document.querySelectorAll(".card,.article");
+
+
+
+items.forEach(item=>{
+
+
+if(
+item.innerText
+.toLowerCase()
+.includes(value)
+)
+
+{
+
+item.style.display="block";
+
+}
+
+else
+
+{
+
+item.style.display="none";
+
+}
+
+
+});
+
+
+});
+
+
+
+</script>
+
+
+
 </body>
+
 
 </html>

@@ -5,7 +5,7 @@
 
 Daily cybersecurity analysis about Detection Engineering.
 
-Date: 2026-06-25
+Date: 2026-06-26
 
 
 ## Overview

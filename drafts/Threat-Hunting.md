@@ -5,7 +5,7 @@
 
 Daily cybersecurity analysis about Threat Hunting.
 
-Date: 2026-08-13
+Date: 2026-08-14
 
 
 ## Overview
